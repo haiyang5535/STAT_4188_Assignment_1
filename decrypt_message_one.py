@@ -41,3 +41,11 @@ encrypted_message = encrypted_file.readline()
 encrypted_file.close()
 
 # Write code below
+d = dict()
+for key, value in cipher.items():
+    d[value] = key
+
+fl = list(encrypted_message)
+for i in range(len(fl)):
+    fl[i] = d[fl[i]]
+print(''.join(fl))
